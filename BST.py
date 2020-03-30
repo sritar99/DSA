@@ -77,7 +77,14 @@ class BST:
   
     	return root
 
-
+	def minValueNode( node): 
+    		current = node 
+  
+    		# loop down to find the leftmost leaf 
+    		while(current.left is not None): 
+        		current = current.left  
+  
+    		return current
 
 	def getLevelOrder(root):
 		h=height(root)
